@@ -1,0 +1,36 @@
+#!/bin/bash
+# chkconfig: 123456 90 10
+#forever start -c /usr/bin/python /opt/sqsspot/sqsdemoreader.py
+
+workdir=/opt/sqsspot
+ 
+start() {
+    cd $workdir
+    /usr/bin/python /opt/sqsspot/sqsdemoreader.py &
+    echo "Server started."
+}
+ 
+stop() {
+    pid=`ps -ef | grep '[p]ython /opt/sqsspot/sqsdemoreader.py' | awk '{ print $2 }'`
+    echo $pid
+    kill $pid
+    sleep 2
+    echo "Server killed."
+}
+ 
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop   
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  *)
+    echo "Usage: /etc/init.d/sqsspotautostart.sh {start|stop|restart}"
+    exit 1
+esac
+exit 0
