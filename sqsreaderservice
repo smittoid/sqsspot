@@ -1,6 +1,5 @@
 #!/bin/bash
 # chkconfig: 123456 90 10
-#forever start -c /usr/bin/python /opt/sqsspot/sqsdemoreader.py
 
 workdir=/opt/sqsspot
  
@@ -30,7 +29,7 @@ case "$1" in
     start
     ;;
   *)
-    echo "Usage: /etc/init.d/sqsspotautostart.sh {start|stop|restart}"
+    echo "Usage: /etc/init.d/sqsreaderservice {start|stop|restart}"
     exit 1
 esac
 exit 0
