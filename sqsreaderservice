@@ -10,7 +10,7 @@ start() {
 }
  
 stop() {
-    pid=`ps -ef | grep '[p]ython /opt/sqsspot/sqsdemoreader.py' | awk '{ print $2 }'`
+    pid=`ps -ef | grep '[p]ython /opt/sqsspot/sqsreader.py' | awk '{ print $2 }'`
     echo $pid
     kill $pid
     sleep 2
