@@ -5,7 +5,7 @@ workdir=/opt/sqsspot
  
 start() {
     cd $workdir
-    /usr/bin/python /opt/sqsspot/sqsdemoreader.py &
+    /usr/bin/python /opt/sqsspot/sqsreader.py &
     echo "Server started."
 }
  
