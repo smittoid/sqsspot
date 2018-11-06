@@ -1,8 +1,16 @@
 import sys
 import time
 import boto
+import boto3
 import boto.sqs
 from boto.sqs.message import Message
+from boto3.dynamodb.conditions import Key, Attr
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table('sqsspot')
+response = table.query(KeyConditionExpression=Key('parameter').eq('queuereadrate'))
+items = response['Items']
+queuerate = items[0]["value"]
 
 conn = boto.sqs.connect_to_region("us-west-2")
 
@@ -25,7 +33,7 @@ while queuedepth >= 0:
         print(timestamp)
         print(value)
         q.delete_message(message)
-        time.sleep(0.5)
+        time.sleep(queuerate)
     except AttributeError:
         print("No message returned")
     except:
