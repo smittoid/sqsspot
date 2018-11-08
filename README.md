@@ -6,7 +6,7 @@ Baseline instance - ec2-34-221-47-137.us-west-2.compute.amazonaws.com
 
 ## Install required software
     sudo yum install -y gcc python-pip git
-    sudo pip install boto
+    sudo pip install boto3
 
 ## Copy deployment assets from GIT repository
     git clone https://github.com/smittoid/sqsspot.git /home/ec2-user/sqsspot

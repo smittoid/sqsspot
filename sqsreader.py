@@ -6,7 +6,7 @@ import boto.sqs
 from boto.sqs.message import Message
 from boto3.dynamodb.conditions import Key, Attr
 
-dynamodb = boto3.resource('dynamodb')
+dynamodb = boto3.resource('dynamodb', 'us-west-2')
 table = dynamodb.Table('sqsspot')
 response = table.query(KeyConditionExpression=Key('parameter').eq('queuereadrate'))
 items = response['Items']
