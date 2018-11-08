@@ -1,0 +1,17 @@
+{
+    "PolicyName": "ScaleDown5", 
+    "ScalableDimension": "ec2:spot-fleet-request:TargetCapacity", 
+    "ResourceId": "spot-fleet-request/sfr-522565cc-b9fe-4e48-9fc1-6940944c6de9", 
+    "StepScalingPolicyConfiguration": {
+        "Cooldown": 60, 
+        "StepAdjustments": [
+            {
+                "ScalingAdjustment": 1, 
+                "MetricIntervalLowerBound": 0.0
+            }
+        ], 
+        "AdjustmentType": "ExactCapacity"
+    }, 
+    "PolicyType": "StepScaling", 
+    "ServiceNamespace": "ec2"
+}

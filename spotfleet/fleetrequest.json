@@ -1,0 +1,19 @@
+{
+    "AllocationStrategy": "lowestPrice",
+    "TargetCapacity": 1,
+    "IamFleetRole": "arn:aws:iam::726467997675:role/aws-ec2-spot-fleet-tagging-role",
+    "LaunchTemplateConfigs": [
+        {
+            "LaunchTemplateSpecification": {
+                "LaunchTemplateId": "lt-06f025cd9079bbdfa",
+                "Version": "5"
+            },
+            "Overrides": [
+                {
+                    "SubnetId": "subnet-a78b0cc0,subnet-5cbe6715,subnet-60291138"
+                }
+            ]
+            
+        }
+    ]
+  }

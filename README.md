@@ -12,7 +12,7 @@ Baseline instance - ec2-34-221-47-137.us-west-2.compute.amazonaws.com
     git clone https://github.com/smittoid/sqsspot.git /home/ec2-user/sqsspot
 
 ## Set up script to run as a daemon
->Copy startup script to /etc/init.d/sqsreaderservice
+Copy startup script to /etc/init.d/sqsreaderservice
 
     mkdir /opt/sqsspot
     cp /home/ec2-user/sqsspot/sqsreader.py /opt/sqsspot/
@@ -22,4 +22,6 @@ Baseline instance - ec2-34-221-47-137.us-west-2.compute.amazonaws.com
     /sbin/chkconfig sqsreaderservice on
     service sqsreaderservice start
 
+## [Spot Fleet Configuration](/spotfleet/README.md)
 
+## [Lambda SQS Message Generator Configuration](/sqswriterlambda/README.md)

@@ -2,8 +2,8 @@
 
 yum update -y
 yum install -y gcc python-pip git
-sudo pip install boto
-sudo pip install boto3
+pip install boto
+pip install boto3
 
 git clone https://github.com/smittoid/sqsspot.git /home/ec2-user/sqsspot
 

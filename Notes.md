@@ -24,3 +24,6 @@ sudo npm install -g forever
 
 ## Direct copy assets via SCP
     scp -i ~/.ssh/AWSLinuxKeys090418.pem ./sqsreader.py ec2-user@ec2-34-221-47-137.us-west-2.compute.amazonaws.com:/home/ec2-user
+
+
+
